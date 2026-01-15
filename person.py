@@ -28,7 +28,7 @@ class Person:
         self.first_name : str = input("Enter your first name: ")
         self.last_name : str = input("Enter your last name: ")
         self.gender : str = input("Enter your gender: ")
-        self.email : str = input("Enter your email (optional): ")
+        self.email : str | None = input("Enter your email (optional): ")
 
         if self.first_name == '' or self.last_name == '':
             print("First name or last name cannot be empty. Using default values.")
@@ -40,7 +40,7 @@ class Person:
             self.gender = 'Not specified'
 
         if self.email == '':
-            self.email = None
+            self.email : str | None = None
     
 
     def how_old(self):
