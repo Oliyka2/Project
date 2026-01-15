@@ -59,11 +59,13 @@ class Person:
         self.user_dates : date = date(birth_year, birth_month, birth_day)
         self.age = (now - self.user_dates).days // 365
     
+
     def __str__(self):
         return f"{self.first_name} {self.last_name}, {self.gender}, {self.age} years old, born on {self.user_dates}, email: {self.email}"
+    
+    def __repr__(self):
+        return f"Person(first_name='{self.first_name}', last_name='{self.last_name}', gender='{self.gender}', age={self.age}, email={repr(self.email)})"
 
 
 
-person = Person()
-person.identity()
-print(person)
+
