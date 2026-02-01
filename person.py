@@ -78,7 +78,7 @@ class Person:
             print("Invalid input. Using default date of birth: 1990-01-01")
             birth_year, birth_month, birth_day = 1990, 1, 1
 
-        self.person_dates: date = date(birth_year, birth_month, birth_day)
+        self.person_dates = date(birth_year, birth_month, birth_day)
         self.age = (now - self.person_dates).days // 365
 
     def __str__(self) -> str:

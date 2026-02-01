@@ -4,7 +4,7 @@ from cryptography.fernet import Fernet
 class PasswordManager:
     """Class to manage password encryption and decryption using Fernet symmetric encryption."""
 
-    def __init__(self):
+    def __init__(self) -> None:
         self.key: bytes | None = None
         self.password = ''
 
@@ -44,7 +44,7 @@ class PasswordManager:
         self.password = encrypted.decode()
         return self.password
 
-    def decrypt_password(self, encrypted_password: str | None = None, my_key: bytes | None = None) -> str:
+    def decrypt_password(self, encrypted_password: str | None = None, my_key: bytes | None = None) -> str| None:
         """Decrypt an encrypted password using the provided or internally stored key.
 
         Args:
