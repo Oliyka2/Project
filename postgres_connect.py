@@ -108,8 +108,3 @@ class TestDBConnection:
             self.connection.close()
             print("Database connection closed.")
 
-db = TestDBConnection()
-db.connect()
-# db.create_table()
-# db.insert_data()
-db.close()
